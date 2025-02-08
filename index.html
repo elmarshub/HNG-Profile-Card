@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Meta tags for SEO -->
+    <meta
+      name="description"
+      content="Martin Ifeanyi - Front-End Developer Portfolio"
+    />
+    <meta
+      name="keywords"
+      content="frontend developer, web developer, javascript, react, nigeria"
+    />
+    <meta name="author" content="Martin Ifeanyi" />
+
     <!-- Remix Icons -->
     <link
       rel="stylesheet"
@@ -17,41 +28,62 @@
     <link rel="icon" type="image/svg+xml" href="./image/icons8-mario-48.png" />
 
     <!-- Title -->
-    <title>Martin Ifeanyi || Profile Card</title>
+    <title>Martin Ifeanyi | Frontend Developer</title>
   </head>
   <body>
     <div class="container">
       <div class="profile-card">
-        <!-- Profile Image -->
-        <img
-          src="./image/profile2.jpg"
-          alt="Profile Picture"
-          class="card-image"
-          data-testid="profilePicture"
-        />
+        <!-- Profile Image with Status -->
+        <div class="image-container">
+          <img
+            src="./image/profile2.jpg"
+            alt="Martin Ifeanyi - Frontend Developer"
+            class="card-image"
+            data-testid="profilePicture"
+          />
+          <span class="status-badge" title="Available for opportunities">
+            <i class="ri-checkbox-blank-circle-fill"></i>
+          </span>
+        </div>
 
         <!-- Profile Details -->
-        <h2 class="card-name" data-testid="fullName">Martin Ifeanyi</h2>
-        <p class="card-title" data-testid="jobTitle">Front-End Developer</p>
+        <h1 class="card-name" data-testid="fullName">Martin Ifeanyi</h1>
+        <div class="card-title" data-testid="jobTitle">
+          <i class="ri-code-s-slash-line"></i>
+          Frontend Developer
+        </div>
+
+        <!-- Skills Tags -->
+        <div class="skills-container">
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Git</span>
+        </div>
+
         <p class="card-bio" data-testid="shortBio">
-          Passionate about creating interactive web experiences and crafting
-          innovative solutions.
+          Frontend developer passionate about creating responsive and
+          user-friendly web experiences with modern JavaScript.
         </p>
-        <p class="card-location" data-testid="currentLocation">
-          Lagos, Nigeria
-        </p>
-        <p class="card-email" data-testid="emailAddress">
-          martinsifeanyi247@gmail.com
-        </p>
+
+        <div class="info-container">
+          <p class="card-location" data-testid="currentLocation">
+            <i class="ri-map-pin-2-line"></i>
+            Lagos, Nigeria
+          </p>
+          <p class="card-email" data-testid="emailAddress">
+            <i class="ri-mail-line"></i>
+            martinsifeanyi247@gmail.com
+          </p>
+        </div>
 
         <!-- Social Links -->
         <div class="card__social" id="card-social">
           <div class="card__social-control">
-            <!-- Toggle Button -->
             <div
               class="card__social-toggle"
               id="card-toggle"
               data-testid="toggleButton"
+              title="View Social Links"
             >
               <i class="ri-add-line"></i>
             </div>
@@ -60,11 +92,13 @@
               >My Socials</span
             >
 
-            <!-- Social Links List -->
             <ul class="card__social-list">
               <a
                 href="https://github.com/elmars-hub"
                 class="card__social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GitHub Profile"
                 data-testid="socialLinks"
               >
                 <i class="ri-github-line"></i>
@@ -73,6 +107,8 @@
                 href="https://x.com/0xx_eth"
                 class="card__social-link"
                 target="_blank"
+                rel="noopener noreferrer"
+                title="Twitter Profile"
                 data-testid="socialLinks"
               >
                 <i class="ri-twitter-line"></i>
@@ -81,6 +117,8 @@
                 href="https://www.linkedin.com/in/martin-ifeanyi/"
                 class="card__social-link"
                 target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn Profile"
                 data-testid="socialLinks"
               >
                 <i class="ri-linkedin-line"></i>
@@ -89,8 +127,11 @@
           </div>
         </div>
 
-        <!-- UTC Time -->
-        <p class="card-time" id="utc-time" data-testid="currentTimeUTC"></p>
+        <!-- UTC Time with Icon -->
+        <div class="time-container">
+          <i class="ri-time-line"></i>
+          <p class="card-time" id="utc-time" data-testid="currentTimeUTC"></p>
+        </div>
       </div>
     </div>
 
